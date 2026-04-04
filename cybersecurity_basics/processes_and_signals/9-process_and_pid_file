@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script creates a PID file, handles multiple signals, and cleans up on exit
+
+# Create the PID file in /tmp
+echo $$ > /tmp/myscript.pid
+
+# Handle SIGTERM: Display message and cleanup
+trap "echo 'I hate the kill command'; rm /tmp/myscript.pid; exit" SIGTERM
+
+# Handle SIGINT: Display message when receiving Ctrl+C
+trap "echo 'Y U no love me?!'" SIGINT
+
+# Handle SIGQUIT: Cleanup and exit
+trap "rm /tmp/myscript.pid; exit" SIGQUIT
+
+# Infinite loop
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
