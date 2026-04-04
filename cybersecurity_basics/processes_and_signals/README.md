@@ -9,4 +9,4 @@ Task6-A Bash script that stops the `4-to_infinity_and_beyond` process using `pki
 Task7- A Bash script that displays "To infinity and beyond" indefinitely, but displays "I am invincible!!!" when it receives a `SIGTERM` signal.
 Task8- A Bash script that kills the `7-highlander` process using the `SIGKILL` signal.
 Task9-A Bash script that creates a PID file in `/tmp`, handles `SIGTERM`, `SIGINT`, and `SIGQUIT` signals, and deletes the PID file before terminating.
-Task10- 
+Task10- A set of scripts where one acts as a daemon and the other as an init script to manage it using start, stop, and restart commands. 
