@@ -6,4 +6,4 @@ Task3- A Bash script that displays the PID and name of processes containing the 
 Task4- A Bash script that displays "To infinity and beyond" indefinitely with a 2-second sleep between each iteration.
 Task5- A Bash script that stops the `4-to_infinity_and_beyond` process using the `pkill` command.
 Task6-A Bash script that stops the `4-to_infinity_and_beyond` process using `pkill` instead of `kill` or `killall`. 
-Task7- 
+Task7- A Bash script that displays "To infinity and beyond" indefinitely, but displays "I am invincible!!!" when it receives a `SIGTERM` signal.
