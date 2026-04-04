@@ -5,5 +5,5 @@ Task2-A Bash script that displays lines containing the "bash" word to easily get
 Task3- A Bash script that displays the PID and name of processes containing the word "bash" without using `ps`.
 Task4- A Bash script that displays "To infinity and beyond" indefinitely with a 2-second sleep between each iteration.
 Task5- A Bash script that stops the `4-to_infinity_and_beyond` process using the `pkill` command.
-Task6- 
+Task6-A Bash script that stops the `4-to_infinity_and_beyond` process using `pkill` instead of `kill` or `killall`. 
 Task7- 
