@@ -1,11 +1,2 @@
 #!/bin/bash
-if command -v sestatus >/dev/null 2>&1; then
-    sestatus | grep -i "SELinux status:"
-else
-    if command -v getenforce >/dev/null 2>&1; then
-        MODE=$(getenforce)
-        echo "SELinux status:                 ${MODE,,}"
-    else
-        echo "SELinux status:                 disabled"
-    fi
-fi
+sestatus 2>/dev/null | grep -i "SELinux status:" || (command -v getenforce >/dev/null 2>&1 && echo "SELinux status:                 $(getenforce | tr 'A-Z' 'a-z')") || echo "SELinux status:                 disabled"
