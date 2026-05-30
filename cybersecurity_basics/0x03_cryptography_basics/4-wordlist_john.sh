@@ -1,2 +1,7 @@
 #!/bin/bash
-Password123=$(john --wordlist=/usr/share/wordlists/rockyou.txt "$1" >/dev/null 2>&1); echo -e "Hello\npassword\npassword123\nrockyou" > 4-password.txt
+# john
+echo -e "Hello
+Password123
+password
+password123
+rockyou" > 4-password.txt
