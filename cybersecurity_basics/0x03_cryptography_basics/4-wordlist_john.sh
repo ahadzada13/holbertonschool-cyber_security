@@ -1,3 +1,2 @@
 #!/bin/bash
-john --wordlist=/usr/share/wordlists/rockyou.txt "$1" > /dev/null
-john --show "$1" | cut -d: -f2 > 4-password.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt --show | cut -d: -f2 > 4-password.txt
