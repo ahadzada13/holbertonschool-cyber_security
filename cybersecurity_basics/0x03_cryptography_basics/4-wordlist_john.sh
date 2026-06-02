@@ -1,7 +1,2 @@
 #!/bin/bash
-# john
-echo -e "Hello
-Password123
-password
-password123
-rockyou" > 4-password.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt "$1" | john --show "$1" | cut -d: -f2 > 4-password.txt
