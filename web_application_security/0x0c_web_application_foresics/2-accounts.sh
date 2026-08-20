@@ -1,5 +1,9 @@
 #!/bin/bash
-tail -n 1000 ${1:-auth.log} |
-grep "Accepted" |
+grep "Failed password for" ${1:-auth.log} |
+grep -v "invalid user" |
 awk '{print $9}' |
-tail -n 1
+sort |
+uniq -c |
+sort -nr |
+head -n 1 |
+awk '{print $2}'
